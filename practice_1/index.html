@@ -4,9 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practice_1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:wght@800&family=PT+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <button class="btn btn-main" onclick="openModal()">Стать партнёром проекта</button>
+    </div>
+
+    <div class="overlay" onclick="closeModalByClickedOverlay(event)">
+        <div class="modal">
+            <h2 class="modal__title">Стань партнёром проекта</h2>
+
+            <form method="POST">
+                <div class="modal__container">
+                    <div class="modal__input-container modal__input-container-1">
+                        <label for="name">Название организации</label>
+                        <input type="text" placeholder="АВЦ" name="name" id="name" required>
+                    </div>
+    
+                    <div class="modal__input-container modal__input-container-2">
+                        <label for="phone"> Телефон</label>
+                        <input type="tel" placeholder="+7 933 848-34-33" name="phone" id="phone" required>
+                    </div>
+    
+                    <div class="modal__input-container modal__input-container-3">
+                        <label for="mail">E-mail</label>
+                        <input type="email" placeholder="avc@gmail.com" name="mail" id="mail" required>
+                    </div>
+    
+                    <div class="modal__input-container modal__input-container-4">
+                        <div class="modal__close">&#9587;</div>
+                        <!-- <span>Логотип (jpeg, png)</span>
+                        <div class="modal__logo">
+                            <img src="img/logo.png" alt="logo" class="modal__logo-image">
+                            <label for="logo" class="modal__logo-label">Выберите файл</label>
+                            <input type="file" name="logo" id="logo" required>
+                        </div> -->
+                    </div>
+    
+                    <div class="modal__input-container modal__input-container-5">
+                        <label for="direction">Направление</label>
+                        <input type="text" placeholder="Экология" name="direction" id="direction" required>
+                        <a href="#" class="modal__link">
+                            <img src="icons/arrow.svg" alt="arrow">
+                        </a>
+                    </div>
+    
+                    <div class="modal__input-container modal__input-container-6">
+                        <input type="text" placeholder="avc.ru" name="global" id="global">
+                        <a href="#" class="modal__link">
+                            <img src="icons/internet.svg" alt="icon">
+                        </a>
+                    </div>
+    
+                    <div class="modal__input-container modal__input-container-7">
+                        <input type="text" placeholder="vk.com/shans" name="vk" id="vk">
+                        <a href="#" class="modal__link">
+                            <img src="icons/vk.svg" alt="icon">
+                        </a>
+                    </div>
+    
+                    <div class="modal__input-container modal__input-container-8">
+                        <input type="text" placeholder="ok.com/shans" name="odnoklassniki" id="odnoklassniki">
+                        <a href="#" class="modal__link">
+                            <img src="icons/odnoklassniki.svg" alt="icon">
+                        </a>
+                    </div>
+    
+                    <div class="modal__input-container modal__input-container-9">
+                        <input type="text" placeholder="facebook.com/shans" name="facebook" id="facebook">
+                        <a href="#" class="modal__link">
+                            <img src="icons/facebook.svg" alt="icon">
+                        </a>
+                    </div>
+    
+                    <div class="modal__input-container modal__input-container-10">
+                        <input type="text" placeholder="instagram.com/shans" name="instagram" id="instagram">
+                        <a href="#" class="modal__link">
+                            <img src="icons/instragram.svg" alt="icon">
+                        </a>
+                    </div>
+    
+                    <div class="modal__input-container modal__input-container-11">
+                        <input type="text" placeholder="youtube.com/shans" name="youtube" id="youtube">
+                        <a href="#" class="modal__link">
+                            <img src="icons/youtube.svg" alt="icon">
+                        </a>
+                    </div>
+    
+                    <div class="modal__input-container modal__input-container-12">
+                        <label for="head">Руководитель</label>
+                        <input type="text" placeholder="Александров Иван Васильевич" name="head" id="head">
+                    </div>
+                </div>
+
+                <div class="modal__buttons">
+                    <button class="btn modal__btn-next" type="submit">Стать партнёром проекта</button>
+                    <button class="modal__btn-back" onclick="closeModal()">Отменить</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
