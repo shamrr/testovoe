@@ -36,3 +36,5 @@ const createPostElement = (id, title, body) => {
 
     return tableBody;
 }
+
+getPosts();
