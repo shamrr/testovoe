@@ -17,7 +17,7 @@ body{
 }
 
 .table__head {
-    background-color: #4a4646;
+    background-color: #b09999;
     color: #fff;
 }
 
@@ -26,13 +26,25 @@ body{
 }
 
 .table__row:nth-child(even) {
-    background-color: #e0e0e0;
+    background-color: #f8e8e8;
 }
 
 .table__row:hover {
-    background-color: #ccc;
+    background-color: #e5d5d5;
 }
 
 .table__row td {
     padding: 1rem;
+}
+
+.search{
+    border: .2rem solid #b09999;
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 20rem;
+    width: 100%;
+}
+
+.m-10{
+    margin: 2rem 1rem 1rem 1rem;
 }
