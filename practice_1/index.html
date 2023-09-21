@@ -34,14 +34,20 @@
                     </div>
     
                     <div class="modal__input-container modal__input-container-4">
-                        <div class="modal__close">&#9587;</div>
-                        <!-- <span>Логотип (jpeg, png)</span>
-                        <div class="modal__logo">
-                            <img src="img/logo.png" alt="logo" class="modal__logo-image">
-                            <label for="logo" class="modal__logo-label">Выберите файл</label>
-                            <input type="file" name="logo" id="logo" required>
-                        </div> -->
+                        <label for="logo" class="modal__logo-label">Логотип (jpeg, png)</label>
+                    
+                        <div class="logo">
+                            <div class="modal__close" onclick="deleteImage()">&#9587;</div>
+                            <img src="img/logo.png" alt="logo" class="logo__img">
+
+                    
+                            <img src="icons/select.svg" alt="select" class="select">
+                            <label for="logo" class="logo__label">Выберите файл</label>
+                            <input type="file" name="logo" id="logo" onchange="showImage()" required>
+                            
+                        </div>
                     </div>
+                    
     
                     <div class="modal__input-container modal__input-container-5">
                         <label for="direction">Направление</label>
