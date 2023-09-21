@@ -4,20 +4,24 @@ const logoImg = document.querySelector('.logo__img');
 const select = document.querySelector('.select');
 const logoLabel = document.querySelector('.logo__label');
 
+//открываем модальное окно
 const openModal = () => {
     overlay.classList.add('active')
 }
 
+//закрываем модальное окно 
 const closeModal = () => {
     overlay.classList.remove('active');
 }
 
+//закрываем модальное окно нажатием на фон
 const closeModalByClickedOverlay = (event) => {
     if(event.target === overlay) {
         closeModal();
     }
 }
 
+//загружаем и отображаем картинку на странице, которую добавил пользователь
 const showImage = () => {
     if (fileInput.files[0]) {
         const reader = new FileReader();
@@ -33,6 +37,7 @@ const showImage = () => {
     }
 }
 
+//удаляем картинку со страницы
 const deleteImage = () => {
     logoImg.src = 'img/logo.png';
     select.style.display = 'block';
