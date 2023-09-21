@@ -48,3 +48,20 @@ body{
 .m-10{
     margin: 2rem 1rem 1rem 1rem;
 }
+
+#loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: circle 2s infinite;
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(0)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
