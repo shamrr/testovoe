@@ -10,15 +10,15 @@
 <body>
     <div class="container">
         <table class="table">
+            <input type="text" placeholder="Search" class="search m-10" oninput="searchInTable(event)">
             <thead class="table__head">
                 <tr>
-                    <th>ID</th>
-                    <th>Title</th>
-                    <th>Body</th>
+                    <th onclick="sortTable(event)">ID</th>
+                    <th onclick="sortTable(event)">Title</th>
+                    <th onclick="sortTable(event)">Body</th>
                 </tr>
             </thead>
-            <tbody class="table__body">
-            </tbody>
+            <tbody class="table__body"></tbody>
         </table>
     </div>
     <script src="index.js"></script>
