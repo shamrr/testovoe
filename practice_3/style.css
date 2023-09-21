@@ -1,0 +1,38 @@
+html{
+    font-size: 10px;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5rem;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+}
+
+.table__head {
+    background-color: #4a4646;
+    color: #fff;
+}
+
+.table__head th {
+    padding: 1.5rem;
+}
+
+.table__row:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+.table__row:hover {
+    background-color: #ccc;
+}
+
+.table__row td {
+    padding: 1rem;
+}
