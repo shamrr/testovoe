@@ -2,6 +2,7 @@ const overlay = document.querySelector('.overlay');
 const fileInput = document.querySelector('#logo');
 const logoImg = document.querySelector('.logo__img');
 const select = document.querySelector('.select');
+const form = document.querySelector('form');
 const logoLabel = document.querySelector('.logo__label');
 
 //открываем модальное окно
@@ -42,4 +43,18 @@ const deleteImage = () => {
     logoImg.src = 'img/logo.png';
     select.style.display = 'block';
     logoLabel.style.display = 'block';
+}
+
+//отправляем форму
+const handleSubmit = (event) =>{
+    event.preventDefault();
+
+    resetForm();
+    deleteImage();
+    closeModal();
+}
+
+//сбрасываем форму
+const resetForm = () => {
+    form.reset();
 }
