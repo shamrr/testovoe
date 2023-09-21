@@ -3,6 +3,10 @@ const POSTS_URL = "https://jsonplaceholder.typicode.com/posts";
 const getPosts = async () => {
     try{
         const response = await fetch(POSTS_URL);
+        
+        setTimeout(() => {
+            toggleLoader();
+        }, 2000)
 
         if (!response.ok) {
             throw new Error("Error!");
@@ -10,16 +14,17 @@ const getPosts = async () => {
 
         const posts = await response.json();
 
-        posts.forEach(post => {
-            createPostElement(post.id, post.title, post.body);
-        }) 
-
+        setTimeout(() => {
+            posts.forEach(post => {
+                createPostElement(post.id, post.title, post.body);
+            }) 
+        }, 2000)
+        
     } catch (error) {
         console.log("error", error);
     } finally {
-        console.log("finally!");
+        toggleLoader();
     }
-    
 }
 
 const createPostElement = (id, title, body) => {
@@ -38,3 +43,15 @@ const createPostElement = (id, title, body) => {
 }
 
 getPosts();
+
+//функционал для loader
+const toggleLoader = () => {
+    const loaderHTML = document.querySelector('#loader');
+    const isHidden = loaderHTML.hasAttribute('hidden');
+
+    if(isHidden) {
+        loaderHTML.removeAttribute('hidden');
+    } else {
+        loaderHTML.setAttribute('hidden', '');
+    }
+}
