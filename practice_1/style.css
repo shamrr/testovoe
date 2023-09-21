@@ -68,6 +68,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     transform: translate(0, 0);
 }
 
+
+/*modal styles start*/
 .overlay {
     width: 100%;
     position: absolute;
@@ -84,8 +86,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .overlay.active {
     display: flex;
 }
-
-
 
 .modal{
     background-color: #fff;
@@ -222,4 +222,130 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     color: #0848C0;
 }
 
+.modal__input-container .modal__logo-label{
+    position: static;
+    font-weight: 700;
+}
 
+.logo{
+    position: relative;
+    width: 16.5rem;
+    height: 16.5rem;
+}
+
+.modal__input-container .logo__label{
+    color: #fff;
+    text-align: center;
+    font-size: 1.9rem;
+    line-height: 2.8rem;
+    text-decoration-line: underline;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.modal__input-container .logo__label::before{
+    display: none;
+}
+
+.logo{
+    margin-top: 1.3rem;
+}
+
+.modal__input-container .logo__img{
+    position: static;
+    width: 16.5rem;
+    height: 16.5rem;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.select{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo__container input{
+    display: none;
+}
+
+.modal__close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    background-color: #fff;
+    color: #6A6E72;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+/*modal styles end*/
+
+
+/* media-rules start*/
+@media screen and (max-width: 69rem) {
+    .modal {
+        padding: 2rem; 
+    }
+    .modal__container{
+        grid-template-columns: 100%;
+        grid-template-rows: 20rem repeat(11, 5.6rem);
+    }
+    .modal__input-container-4{
+        grid-area: 1 / 1 / 2 / 2;
+        justify-self: center;
+    }
+    
+    .modal__input-container-5{
+        grid-column: 1 / 2;
+    }
+    
+    .modal__input-container-6{
+        grid-column: 1 / 2;
+    }
+    
+    .modal__input-container-7{
+        grid-column: 1 / 2;
+    }
+    
+    .modal__input-container-8{
+        grid-column: 1 / 2;
+    }
+    
+    .modal__input-container-9{
+        grid-column: 1 / 2;
+    }
+    
+    .modal__input-container-10{
+        grid-column: 1 / 2;
+    }
+    
+    .modal__input-container-11{
+        grid-column: 1 / 2;
+    }
+    
+    .modal__input-container-12{
+        grid-column: 1 / 2;
+    }
+}
+
+@media screen and (max-width: 55rem) {
+    .overlay{
+        padding: 0;
+    }
+    .modal{
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+/* media-rules end*/
