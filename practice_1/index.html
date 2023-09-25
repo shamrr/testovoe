@@ -23,9 +23,9 @@
                         <input type="text" placeholder="АВЦ" name="name" id="name" required>
                     </div>
     
-                    <div class="modal__input-container modal__input-container-2" oninput="createMaskForPhone(event)">
+                    <div class="modal__input-container modal__input-container-2">
                         <label for="phone"> Телефон</label>
-                        <input type="tel" placeholder="+7 933 848-34-33" name="phone" id="phone" required>
+                        <input type="tel" placeholder="+7 933 848-34-33" name="phone" id="phone" required oninput="createMaskForPhone(event)">
                     </div>
     
                     <div class="modal__input-container modal__input-container-3">
