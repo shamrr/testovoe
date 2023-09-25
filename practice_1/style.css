@@ -220,6 +220,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .modal__btn-back{
     background-color: #fff;
     color: #0848C0;
+    font-size: 1.6rem;  
+    line-height: 2.4rem;
 }
 
 .modal__input-container .modal__logo-label{
